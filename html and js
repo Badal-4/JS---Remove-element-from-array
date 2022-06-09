@@ -1,0 +1,24 @@
+<template for:each={filesUploaded} for:item="file" for:index="index" >
+
+                                           
+
+                            <div key={file.Title} class="slds-text-body_small" >{file.Title}</div>
+
+                            <span key={file.Title} onclick={deletePdf} data-id={index}>
+
+                                <lightning-icon icon-name="utility:delete" size="xx-small" >
+
+                           
+
+                            </lightning-icon>
+                            
+                            
+                            
+                            
+                          
+ var index = event.currentTarget.dataset.id;      
+ this.filesUploaded.splice(index, 1);    
+ this.filesUploaded = [...this.filesUploaded];  
+ console.log(this.filesUploaded);        
+ alert(index);
+
